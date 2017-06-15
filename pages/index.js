@@ -3,7 +3,6 @@ import withEntries, { Entries } from 'nextein/entries'
 import React from 'react'
 
 const Index = ({ entries }) => {
-  console.log(entries)
   return (
   <section>
     <h1>Hello</h1>
