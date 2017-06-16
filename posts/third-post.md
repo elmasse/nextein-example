@@ -1,6 +1,6 @@
 ---
 title: First Node Post
-category: node
+category: home
 ---
 
 Boo yaaah

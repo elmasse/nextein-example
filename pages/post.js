@@ -1,21 +1,21 @@
 
 import React, { Component } from 'react'
 
-import withEntry, { Content } from 'nextein/entry'
+import withPost, { Content } from 'nextein/post'
 
 
 class Post extends Component {
 
   render () {
-    const { entry } = this.props
-    const { data, content } = entry
+    const { post } = this.props
+    const { data, content } = post
     return (
       <section>
         <h1>{data.title}</h1>
-        <Content {...entry}/>
+        <Content {...post}/>
       </section>
     )
   }
 }
 
-export default withEntry(Post)
+export default withPost(Post)
