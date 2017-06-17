@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nextein"
+    "dev": "nextein",
+    "export": "next build && next export",
+    "build": "next build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^3.0.0-beta14",
+    "next": "^3.0.0-beta16",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }
