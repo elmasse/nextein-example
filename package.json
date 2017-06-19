@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nextein",
-    "export": "next build && next export",
-    "build": "next build"
+    "export": "next build && next export"
   },
   "keywords": [],
   "author": "",

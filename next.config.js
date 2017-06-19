@@ -1,7 +1,6 @@
 
-const { exportPathMap, webpack } = require('nextein/config')
+const nexteinConfig = require('nextein/config').default
 
-module.exports = {
-    webpack,
-    exportPathMap
-}
+module.exports = nexteinConfig({
+
+})
