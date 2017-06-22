@@ -4,7 +4,7 @@ import React from 'react'
 export default () => (
   <section style={styles.section}>
     <h1><span style={{ fontWeight: 200 }} >Hello, there. I'm </span>Nextein</h1>
-    <p> A Blog generator based in <strong>Next.js</strong></p>
+    <p> A Blog / Static site generator based in <strong>Next.js</strong></p>
   </section>
 )
 

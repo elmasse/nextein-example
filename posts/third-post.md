@@ -1,5 +1,5 @@
 ---
-title: First Node Post
+title: First Home Post
 category: home
 ---
 

@@ -15,16 +15,16 @@ const Index = ({ posts }) => {
     <main style={styles.main}>
       <NexteinHello/>
       <section style={styles.section}>  
-        <h1>Category Post</h1>
-        <p>There are {inPosts.length} posts total.</p>    
+        <h1>/post</h1>
+        <p>{inPosts.length} entries found.</p>    
         {
           inPosts
           .map((post, idx) => <PostListEntry key={idx} {...post}/>)
         }
       </section>
       <section style={styles.section}>  
-        <h1>Category Home</h1>
-        <p>There are {inHome.length} posts total.</p>    
+        <h1>/home</h1>
+        <p>{inHome.length} entries found.</p>    
         {
           inHome
           .map((post, idx) => <PostListEntry key={idx} {...post}/>)
