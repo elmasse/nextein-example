@@ -1,14 +1,14 @@
 
 import React from 'react'
 
-import withPosts, { inCategory } from 'nextein/posts'
+import withPosts, { inCategory, sortByDate } from 'nextein/posts'
 
 import PostListEntry from '../components/post-list-entry'
 import NexteinHello from '../components/nextein-hello'
 
 const Index = ({ posts }) => {
   
-  const inPosts = posts.filter(inCategory('post'))
+  const inPosts = posts.filter(inCategory('post')).sort(sortByDate)
   const inHome = posts.filter(inCategory('home'))
 
   return (
