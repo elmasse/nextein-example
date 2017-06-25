@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^3.0.0-beta16",
-    "nextein": "^1.0.0-beta8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "next": "^3.0.1-beta.1",
+    "nextein": "^1.0.0-beta9",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
