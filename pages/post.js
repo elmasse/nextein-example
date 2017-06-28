@@ -4,6 +4,14 @@ import withPost, { Content } from 'nextein/post'
 
 import Navigation from '../components/navigation'
 
+const Paragraph = ({ children }) => {
+  return (
+   <p style={styles.paragraph}>
+    {children}
+   </p>
+  )
+}
+
 class Post extends Component {
 
   render () {
@@ -14,7 +22,11 @@ class Post extends Component {
         <Navigation style={styles.section}/>
         <article style={styles.section}>
           <h1>{data.title}</h1>
-          <Content {...post}/>
+          <Content {...post}
+            renderers={{
+              p: Paragraph
+            }}
+          />
         </article>
       </main>
     )
@@ -35,6 +47,10 @@ const styles = {
     flexDirection: 'column',
     alignSelf: 'center',
     width: '60vw' 
+  },
+  paragraph: {
+    background: '#f5f5f5',
+    padding: 20
   }
-
 }
+
