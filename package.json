@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "next": "^3.0.1-beta.1",
-    "nextein": "^1.0.0-beta10",
+    "nextein": "^1.0.0-beta11",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
