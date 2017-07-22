@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "3.0.1-beta.6",
+    "next": "3.0.1-beta.16",
     "nextein": "1.0.0-beta12",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
