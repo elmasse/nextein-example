@@ -5,6 +5,7 @@ import withPosts, { inCategory, sortByDate } from 'nextein/posts'
 
 import PostListEntry from '../components/post-list-entry'
 import NexteinHello from '../components/nextein-hello'
+import Navigation from '../components/navigation'
 
 const Index = ({ posts }) => {
   
@@ -13,6 +14,7 @@ const Index = ({ posts }) => {
 
   return (
     <main style={styles.main}>
+      <Navigation style={styles.navigation}/>
       <NexteinHello/>
       <section style={styles.section}>  
         <h1>/post</h1>
@@ -48,6 +50,12 @@ const styles = {
     flexDirection: 'column',
     alignSelf: 'center',
     width: '60vw' 
+  },
+  navigation: {
+    position: 'absolute',
+    alignSelf: 'center',
+    width: '60vw'
   }
+
 
 }

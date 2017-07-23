@@ -10,6 +10,8 @@ import Navigation from '../components/navigation'
 const Index = ({ posts }) => {
   
   posts.sort(sortByDate)
+  const subCategoryPosts =  posts
+    .filter(inCategory('sub-section', { includeSubCategories: true }))
 
   return (
     <main style={styles.main}>
@@ -17,8 +19,8 @@ const Index = ({ posts }) => {
       <NexteinHello/>
       <section style={styles.section}>  
         {
-          posts
-          .map((post, idx) => <PostListEntry key={idx} {...post}/>)
+          subCategoryPosts
+          .map((post) => <PostListEntry key={post.data.url} {...post}/>)
         }
       </section>
     </main>
