@@ -17,11 +17,21 @@ class Post extends Component {
   render () {
     const { post } = this.props
     const { data, content } = post
+    const tags = [].concat(data.tag)
     return (
       <main style={styles.main}>
         <Navigation style={styles.navigation}/>
         <article style={styles.section}>
           <h1>{data.title}</h1>
+          
+        { tags.length &&
+          <div>
+          {
+            tags.map(tag => <span style={styles.tag} key={`tag-${tag}`}> &gt; {tag}</span>)
+          }
+          </div>
+        
+        }
           <Content {...post}
             renderers={{
               p: Paragraph
@@ -55,6 +65,13 @@ const styles = {
   navigation: {
     alignSelf: 'center',
     width: '60vw'
+  },
+  tag: {
+    display: 'inline',
+    background: '#ccc',
+    fontSize: '.75em',
+    margin: 3,
+    padding: 5
   }
 }
 
