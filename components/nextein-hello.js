@@ -1,10 +1,17 @@
 
 import React from 'react'
 
-export default () => (
+export default ({ title }) => (
   <section style={styles.section}>
     <h1><span style={{ fontWeight: 200 }} >Hello, there. I'm </span>Nextein</h1>
-    <p> A Blog / Static site generator based in <strong>Next.js</strong></p>
+    {!title &&
+       <p> A Blog / Static site generator based in <strong>Next.js</strong></p>
+    }
+    {
+      title &&
+      <h2>{title}</h2>
+    }
+
   </section>
 )
 
