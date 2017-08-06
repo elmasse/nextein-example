@@ -14,11 +14,11 @@ const Index = ({ posts }) => {
   return (
     <main style={styles.main}>
       <Navigation style={styles.navigation} />
-      <NexteinHello/>
+      <NexteinHello title="All Posts"/>
       <section style={styles.section}>  
         {
           posts
-          .map((post, idx) => <PostListEntry key={idx} {...post}/>)
+          .map((post, idx) => <PostListEntry key={`post-${idx}`} {...post}/>)
         }
       </section>
     </main>

@@ -16,7 +16,7 @@ const Index = ({ posts }) => {
   return (
     <main style={styles.main}>
       <Navigation style={styles.navigation} />
-      <NexteinHello/>
+      <NexteinHello title="Sub Section"/>
       <section style={styles.section}>  
         {
           subCategoryPosts

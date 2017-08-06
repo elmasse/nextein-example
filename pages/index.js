@@ -21,7 +21,7 @@ const Index = ({ posts }) => {
         <p>{inPosts.length} entries found.</p>    
         {
           inPosts
-          .map((post, idx) => <PostListEntry key={idx} {...post}/>)
+          .map((post, idx) => <PostListEntry key={`post-${idx}`} {...post}/>)
         }
       </section>
       <section style={styles.section}>  
