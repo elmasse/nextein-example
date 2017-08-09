@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "3.0.1-beta.20",
-    "nextein": "1.0.0-beta16",
+    "next": "3.0.3",
+    "nextein": "1.0.0-beta17",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
