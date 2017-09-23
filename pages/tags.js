@@ -17,7 +17,6 @@ const unique = (arr) => {
 }
 
 const Index = ({ posts }) => {
-
   const tags = unique(posts
     .filter(p => p.data.tag) // remove posts without tags
     .map(post => [].concat(post.data.tag)) // tags to array

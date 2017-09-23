@@ -4,7 +4,8 @@ page: post-with-next-prev
 category: post
 date: 2017-06-21
 tag: [nextein, example]
-slug: /post/second-post.html
+permalink: /:category/:name.html
 ---
 
-More Text
+More Text. This post url should be `/post/second-post.html`
+

@@ -29,7 +29,7 @@ const Index = ({ posts }) => {
         <p>{inHome.length} entries found.</p>    
         {
           inHome
-          .map((post, idx) => <PostListEntry key={idx} {...post}/>)
+          .map((post, idx) => <PostListEntry key={`home-${idx}`} {...post}/>)
         }
       </section>
     </main>

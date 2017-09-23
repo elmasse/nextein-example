@@ -1,15 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from 'nextein/link'
 
 export default ({ style }) => {
   return (
     <nav style={{...styles.nav, ...style}}>
-      <a style={styles.item} href="/">Home</a>
+      <Link href="/"><a style={styles.item}>Home</a></Link>
+      <Link href="/all-posts"><a style={styles.item}>All Posts</a></Link>
+      <Link href="/sub-section"><a style={styles.item}>Sub Section</a></Link>
+      {/* <a style={styles.item} href="/">Home</a>
       <a style={styles.item} href="/all-posts">All Posts</a>
-      <a style={styles.item} href="/sub-section">Sub Section</a>
+      <a style={styles.item} href="/sub-section">Sub Section</a> */}
       <Link href="/tags"><a style={styles.item}>Tags</a></Link>
       {/* <a style={styles.item} href="/tags">Tags</a> */}
-      <Link href={{ pathname: '/post', query: { _entry: 'posts/second-post.md' } }} as={'/post/second-post'}><a style={styles.item}>Post</a></Link>
     </nav>
   )
 }

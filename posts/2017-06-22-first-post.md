@@ -2,7 +2,6 @@
 title: First Post
 page: post-with-next-prev
 category: post
-slug: /post/first-post.html
 tag: nextein
 ---
 
@@ -29,3 +28,5 @@ Another paragraph
 * Elements
     * and 
     * sub-elements
+
+<em>HTML Content</em><a href="#">link</a>

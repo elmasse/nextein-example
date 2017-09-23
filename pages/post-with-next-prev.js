@@ -20,34 +20,25 @@ class Post extends Component {
     return (
       <main style={styles.main}>
         <Navigation style={styles.navigation} />
-        <article style={styles.section}>
+        <article style={styles.article}>
           <h1>{data.title}</h1>
 
-          {tags.length &&
-            <div>
-              {
-                tags.map(tag => <span style={styles.tag} key={`tag-${tag}`}> &gt; {tag}</span>)
-              }
-            </div>
-
+          {
+            tags.length &&
+            tags.map(tag => <span style={styles.tag} key={`tag-${tag}`}> &gt; {tag}</span>)
           }
           <Content {...post} />
-        </article>
-        <footer>
-          <div>
+          <footer>
             {
               prev &&
-              <Link {...prev}><a> <strong>&lt;</strong> Prev: {prev.data.title}</a></Link>
+              <Link {...prev}><a style={styles.prevLink}> <strong>&lt;</strong> Prev: {prev.data.title}</a></Link>
             }
-          </div>
-          <div>
             {
               next &&
-              <Link {...next}><a >Next: {next.data.title} <strong>&gt;</strong> </a></Link>
+              <Link {...next}><a style={styles.nextLink}>Next: {next.data.title} <strong>&gt;</strong> </a></Link>
             }
-          </div>
-
-        </footer>
+          </footer>
+        </article>
       </main>
     )
   }
@@ -62,11 +53,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  section: {
+  article: {
     display: 'flex',
     flexDirection: 'column',
     alignSelf: 'center',
-    width: '60vw'
+    width: '60vw',
+    position: 'relative'
   },
   paragraph: {
     background: '#f5f5f5',
@@ -82,6 +74,11 @@ const styles = {
     fontSize: '.75em',
     margin: 3,
     padding: 5
-  }
+  },
+  nextLink: {
+    position: 'absolute',
+    right: 0
+  },
+  prevLink: {}
 }
 

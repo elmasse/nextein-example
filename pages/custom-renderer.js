@@ -24,7 +24,7 @@ class Post extends Component {
         <article style={styles.section}>
           <h1>{data.title}</h1>
           <Tags tags={tags} />
-          <Content {...post} sanitize={false}
+          <Content {...post}
             renderers={{
               p: Paragraph,
               pre: CodeBlock,
@@ -85,7 +85,7 @@ const styles = {
     width: '60vw'
   },
   codeBlock: {
-    border: '1px solid #ccc;'
+    border: '1px solid #ccc'
   }
 }
 
