@@ -19,7 +19,6 @@ const getStories = async () =>  {
 module.exports = config({
   exportPathMap: async () => {
       const stories = await getStories()
-      console.log(stories)
       return ({
       '/all-posts': { page: '/all-posts' },
       '/sub-section': { page: '/sub-section' },
