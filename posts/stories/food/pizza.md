@@ -1,7 +1,7 @@
 ---
 title: Pizza
 page: post
-permalink: food/pizza
+permalink: /food/pizza
 ---
 
 Pizza is a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.
