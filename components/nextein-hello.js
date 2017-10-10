@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-export default ({ title }) => (
+const Hello = ({ title }) => (
   <section style={styles.section}>
     <h1><span style={{ fontWeight: 200 }} >Hello, there. I'm </span>Nextein</h1>
     {!title &&
@@ -14,6 +14,8 @@ export default ({ title }) => (
 
   </section>
 )
+
+export default Hello
 
 const styles = {
   section: {

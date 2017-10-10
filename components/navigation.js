@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'nextein/link'
 
-export default ({ style }) => {
+const Navigation = ({ style }) => {
   return (
     <nav style={{...styles.nav, ...style}}>
       <Link href="/"><a style={styles.item}>Home</a></Link>
@@ -15,6 +15,8 @@ export default ({ style }) => {
     </nav>
   )
 }
+
+export default Navigation
 
 const styles = {
   nav: {

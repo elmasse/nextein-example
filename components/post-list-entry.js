@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'nextein/link'
 import { Content } from 'nextein/post'
 
-export default ({ data, content, excerpt=true }) => {
+const PostListEntry = ({ data, content, excerpt=true }) => {
   const { url, title, date, _entry, page = 'post' } = data
 
   return (
@@ -17,3 +17,5 @@ export default ({ data, content, excerpt=true }) => {
     </article>
   )
 }
+
+export default PostListEntry
