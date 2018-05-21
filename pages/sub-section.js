@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import withPosts, { inCategory, sortByDate } from 'nextein/posts'
+import {withPostsFilterBy, inCategory, sortByDate } from 'nextein/posts'
 
 import PostListEntry from '../components/post-list-entry'
 import NexteinHello from '../components/nextein-hello'
@@ -10,16 +10,13 @@ import Navigation from '../components/navigation'
 const Index = ({ posts }) => {
   
   posts.sort(sortByDate)
-  const subCategoryPosts =  posts
-    .filter(inCategory('sub-section', { includeSubCategories: true }))
-
   return (
     <main style={styles.main}>
       <Navigation style={styles.navigation} />
       <NexteinHello title="Sub Section"/>
       <section style={styles.section}>  
         {
-          subCategoryPosts
+          posts
           .map((post) => <PostListEntry key={post.data.url} {...post}/>)
         }
       </section>
@@ -27,7 +24,7 @@ const Index = ({ posts }) => {
   )
 }
 
-export default withPosts(Index)
+export default withPostsFilterBy(inCategory('sub-section', { includeSubCategories: true }))(Index)
 
 const styles = {
   main: {    
