@@ -11,6 +11,7 @@ const Navigation = ({ style }) => {
       <a style={styles.item} href="/all-posts">All Posts</a>
       <a style={styles.item} href="/sub-section">Sub Section</a> */}
       <Link href="/tags"><a style={styles.item}>Tags</a></Link>
+      <Link href="/cars"><a style={styles.item}>Cars</a></Link>
       {/* <a style={styles.item} href="/tags">Tags</a> */}
     </nav>
   )
