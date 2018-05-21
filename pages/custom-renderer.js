@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 import withPost, { Content } from 'nextein/post'
+import Link from 'nextein/link'
 
 import Navigation from '../components/navigation'
 import Tags from '../components/tags'
@@ -10,25 +11,26 @@ class Post extends Component {
 
   render () {
     const { post } = this.props
-    const { data, content } = post
-    const tags = data.tag ? [].concat(data.tag) : []
+    const { data: { tag, title } } = post
+    const tags = tag ? [].concat(tag) : []
 
     return (
       <main style={styles.main}>
         <Head>
-          <title>Nextein | {data.title}</title>
+          <title>Nextein | {title}</title>
           <link rel="stylesheet" href="/static/css/prism.css"/>
           <script src="/static/js/prism.js"></script>
         </Head>        
         <Navigation style={styles.navigation}/>
         <article style={styles.section}>
-          <h1>{data.title}</h1>
+          <h1>{title}</h1>
           <Tags tags={tags} />
           <Content {...post}
             renderers={{
               p: Paragraph,
               pre: CodeBlock,
-              code: Code
+              code: Code,
+              a: PostLink
             }}
           />
         </article>
@@ -49,9 +51,9 @@ const Paragraph = ({ children }) => {
   )
 }
 
-const Code = ({ children, className, ...rest }) => {
+const Code = ({ children, className = '' , ...rest }) => {
   return (
-    <code className={className || 'language-js'} {...rest}>
+    <code className={className.trim() || 'language-js'} {...rest}>
       {children}
     </code>
   )
@@ -59,6 +61,11 @@ const Code = ({ children, className, ...rest }) => {
 
 const CodeBlock = ({ children }) => {
   return <pre style={styles.codeBlock}>{children}</pre>
+}
+
+const PostLink = ({ children, href, ...props }) => {
+  
+  return <Link href={ href }><a { ...props }>{children}</a></Link>
 }
 
 // Styles --------

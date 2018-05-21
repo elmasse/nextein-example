@@ -22,3 +22,5 @@ export default () => (<div>Oh Yeah!</div>)
 This is a Markdown fenced code block
 
 ```
+
+Also you can use a custom component to link to another post like <a href="/post/second-post.html">this</a>
