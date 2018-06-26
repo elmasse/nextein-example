@@ -1,5 +1,5 @@
 
-const { default: config } = require('nextein/config')
+const { withNextein } = require('nextein/config')
 const { entries, inCategory } = require('nextein/posts')
 
 const getStories = async () =>  {
@@ -15,8 +15,16 @@ const getStories = async () =>  {
     }), {})
 }
 
+module.exports = withNextein({
+  nextein: {
+    plugins: [
+      ['nextein-plugin-markdown', {
+        // entriesDir: ['posts', 'docs'],
+        rehype: ['rehype-slug']
+      }]
+    ]
+  },
 
-module.exports = config({
   exportPathMap: async () => {
       const stories = await getStories()
       return ({
