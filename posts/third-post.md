@@ -5,7 +5,7 @@ category: home
 tag: [code, example]
 ---
 
-Boo yaaah. Custom Renderers and Highlighted code with Prism.
+Boom shakalaka. Custom Renderers and Highlighted code with Prism.
 
 This posts contains `code blocks` such as `<Content />` and `fenced blocks`
 
