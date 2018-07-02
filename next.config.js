@@ -20,7 +20,7 @@ module.exports = withNextein({
     plugins: [
       ['nextein-plugin-markdown', {
         // entriesDir: ['posts', 'docs'],
-        rehype: ['rehype-slug']
+        rehype: ['rehype-slug', 'rehype-autolink-headings']
       }]
     ]
   },
