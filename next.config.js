@@ -16,13 +16,16 @@ const getStories = async () =>  {
 }
 
 module.exports = withNextein({
-  nextein: {
-    plugins: [
-      ['nextein-plugin-markdown', {
-        // entriesDir: ['posts', 'docs'],
-        rehype: ['rehype-slug', 'rehype-autolink-headings']
-      }]
+  nextein: config => {
+    config.plugins = [
+      {
+        name: 'nextein-plugin-markdown', 
+        options: {
+          rehype: ['rehype-slug', 'rehype-autolink-headings']
+        }
+      }
     ]
+    return config
   },
 
   exportPathMap: async () => {
