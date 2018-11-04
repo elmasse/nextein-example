@@ -28,9 +28,9 @@ module.exports = withNextein({
     return config
   },
 
-  exportPathMap: async () => {
-      const stories = await getStories()
-      return ({
+  exportPathMap: async (defaultPathMap) => {
+    const stories = await getStories()
+    return ({
       '/all-posts': { page: '/all-posts' },
       '/sub-section': { page: '/sub-section' },
       '/tags': { page: '/tags' },
