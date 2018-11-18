@@ -20,7 +20,7 @@ const Index = ({ posts }) => {
   const tags = unique(posts
     .filter(p => p.data.tag) // remove posts without tags
     .map(post => [].concat(post.data.tag)) // tags to array
-    .reduce((c, p = []) => p.concat(...c)) // flatten array
+    .reduce((p, c = []) => p.concat(...c), []) // flatten array
     .sort()
   )
 

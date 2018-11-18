@@ -16,7 +16,7 @@ const Index = ({ posts }) => {
     <main style={styles.main}>
       <Navigation style={styles.navigation}/>
       <NexteinHello/>
-      <section style={styles.section}>  
+      <section style={styles.section}>
         <h1>/post</h1>
         <p>{inPosts.length} entries found.</p>    
         {
