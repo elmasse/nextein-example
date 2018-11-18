@@ -1,6 +1,6 @@
 {
   "name": "nextein-example",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "",
   "main": "index.js",
@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^7.0.0",
-    "nextein": "2.0.0",
+    "next": "^7.0.2",
+    "nextein": "^2.1.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "rehype-autolink-headings": "^2.0.2",
