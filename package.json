@@ -12,10 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^7.0.2",
-    "nextein": "^2.1.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "next": "^8.0.0",
+    "nextein": "^2.1.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "rehype-autolink-headings": "^2.0.2",
     "rehype-slug": "^2.0.1",
     "webpack-bundle-analyzer": "^2.13.1"
