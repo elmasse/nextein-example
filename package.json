@@ -19,5 +19,9 @@
     "rehype-autolink-headings": "^2.0.2",
     "rehype-slug": "^2.0.1",
     "webpack-bundle-analyzer": "^2.13.1"
+  },
+  "devDependencies": {
+    "acorn": "6.0.5",
+    "webpack": "4.28.4"
   }
 }
