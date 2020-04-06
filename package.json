@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.0.0",
-    "nextein": "^2.2.0",
+    "next": "^9.3.4",
+    "nextein": "^2.3.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "rehype-autolink-headings": "^2.0.2",

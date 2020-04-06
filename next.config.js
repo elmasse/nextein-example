@@ -24,6 +24,10 @@ module.exports = withNextein({
           rehype: ['rehype-slug', 'rehype-autolink-headings']
         }
       }
+      // {
+      //   name: './plugins/test'
+      // }
+
     ]
     return config
   },
