@@ -15,13 +15,13 @@ const readingTime = (words) => {
 }
 
 const PostListEntry = ({ data, content, raw, excerpt=true }) => {
-  const { url, title, date, _entry, page = 'post' } = data
+  const { title, date} = data
   const words = countWords(raw)
   const readTime = readingTime(words)
   return (
     <article>
       <h1>
-        <Link data={data}><a>{title}</a></Link>
+        {data.page ? <Link data={data}><a>{title}</a></Link> : title}
       </h1>
       <span>{`${new Date(date).toDateString()} | ~ ${readTime} mins | ${words} words`}</span>
       <Content data={data} content={content} excerpt={excerpt}/>
